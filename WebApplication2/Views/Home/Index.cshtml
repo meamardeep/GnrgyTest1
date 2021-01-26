@@ -1,0 +1,41 @@
+﻿
+<div class="d-flex flex-row justify-content-center align-content-center">
+    @using (Html.BeginForm("", ""))
+    {
+    <div class="d-flex justify-content-center form-group">
+        <h2 class="brand-textColor">
+            Welcome Back!
+        </h2>
+    </div>
+        <div class="form-group">
+            <input class="brand-btnShape input-bgColor p-md-2 p-2" placeholder="Username" style="outline:none;border:none; " />
+        </div>
+        <div class="form-group" style="">
+            <input id="password" class="brand-btnShape input-bgColor p-md-2 p-2" placeholder="Password" type="password" style="outline:none;border:none; margin-left:1px;"/>
+            <i class="fa fa-eye text-primary passwordeye eye" style="" id="iconEye"></i>
+        </div>
+
+        <div>
+            <label class="form-group text-primary form-inline d-flex justify-content-center">
+                <img src="~/Img/forgotpassword.png" height="10" width="10" />
+                <span> &nbsp; Forgot password?</span>
+            </label>
+        </div>
+
+        <button class="btn brand-btnShape  brand-bgcolor text-white" title="Sign in">Sign in</button>
+
+    }
+</div>
+
+<script>
+    $(function () {
+        $("#iconEye").on('click', handlePasswordVisibility)
+    })
+    function handlePasswordVisibility() {
+        
+        const type = $("#password").attr('type') === 'password' ? 'text' : 'password';
+        $("#password").attr('type', type);
+        $("#iconEye").toggleClass('fa-eye-slash');
+        
+    }
+</script>

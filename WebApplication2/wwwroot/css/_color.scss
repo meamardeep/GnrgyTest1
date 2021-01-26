@@ -1,0 +1,18 @@
+﻿$brand-bgcolor: #001B31;
+$inputText-bgcolor: lavender;
+
+@mixin inputTextbg($bgcolor){
+    background-color : $bgcolor;
+}
+
+.brand-bgcolor {
+    background-color: $brand-bgcolor;
+}
+
+.brand-textColor {
+    color: $brand-bgcolor;
+}
+
+.input-bgColor {
+    @include inputTextbg(lavender);
+}

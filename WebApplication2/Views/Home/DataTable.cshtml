@@ -1,0 +1,25 @@
+﻿
+
+<script>
+    $(document).ready(function () {
+       // $("#tblJsonData").DataTable();
+        $('#tblJsonData').DataTable({
+            data: JsonData,
+            columns: [
+                { data: 'Name' },
+                { data: 'Manager' },
+                { data: 'EmpId' }
+                
+            ]
+        });
+    });
+</script>
+
+<table id="tblJsonData">
+    <tr>
+        <th>Id</th><th>Name</th><th>Manager</th>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+    </tr>
+</table>

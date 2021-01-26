@@ -1,0 +1,45 @@
+﻿<script src="~/js/userJsonData.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#user").on("click", getUserDetails);
+
+        var data = JsonData;
+        var employeeData = '';        
+        $.each(data, function (index, item) {
+            employeeData += '<tr onclick=getUserDetails('+ index +')>';
+                employeeData += '<td>' + item.EmpId + '</td>';
+                employeeData += '<td>' + item.Name + '</td>';
+                employeeData += '<td>' + item.Manager + '</td>';
+                employeeData += '</tr>';
+            });
+
+         $('#tblUserList').append(employeeData);
+    });
+
+    function getUserDetails(index) {
+        $("#tblUserDetail").empty();
+        var userDetails = '';
+        var data = JsonData[index];
+
+        userDetails += '<tr> <td>EmpId</td><td>'+data.EmpId+ '</td> </tr>';
+        userDetails += '<tr><td> Emp Name</td><td>' + data.Name + '</td></tr >';
+        userDetails += '<tr><td>Manager</td> <td>' + data.Manager + '</td> </tr>';
+        userDetails += '<tr><td>Phone</td> <td>' + data.Contact.Phone + '</td> </tr>';
+        userDetails += '<tr><td>EmilId</td> <td>' + data.Contact.EmailId + '</td></tr>';
+        userDetails += '<tr><td>Address</td> <td>' + data.Contact.Address + '</td> </tr>';
+
+        $("#tblUserDetail").append(userDetails);
+    }
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            @await Html.PartialAsync("~/Views/User/_UserList.cshtml")
+        </div>
+        <div class="col-md-4">
+            @await Html.PartialAsync("~/Views/User/_UserDetail.cshtml")
+        </div>
+    </div>
+</div>
+

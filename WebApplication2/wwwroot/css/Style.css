@@ -1,0 +1,16 @@
+﻿.brand-bgcolor {
+  background-color: #001B31; }
+
+.brand-textColor {
+  color: #001B31; }
+
+.input-bgColor {
+  background-color: lavender; }
+
+.brand-btnShape {
+  border-radius: 25px;
+  width: 282px; }
+
+.eye {
+  cursor: pointer;
+  margin-left: -33px; }

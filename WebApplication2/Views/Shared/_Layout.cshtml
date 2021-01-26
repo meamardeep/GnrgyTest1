@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Login Page</title>
+    <script src="~/lib/jquery/dist/jquery.js" type="text/javascript"></script>
+
+
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/Style.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css">
+
+    <script src="~/js/userJsonData.js"></script>
+
+
+    <script type="text/javascript" charset="utf8" src="~/lib/datatable/js/datatable.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/lib/datatable/css/datatable.css">
+
+
+
+    @*<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>*@
+
+</head>
+<body>
+    <header>
+        <nav class=" navbar navbar-expand-sm navbar-toggleable-sm  border-bottom box-shadow mb-3 brand-bgcolor" >
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/Img/GngryLogo.png" style="width:auto" height="55" />
+                </a>
+
+                <a class="text-decoration-none text-white" asp-area="" asp-controller="Home" asp-action="ShowUserDetail">
+                    Users
+                </a>
+
+                <a class="text-decoration-none text-white" asp-area="" asp-controller="Home" asp-action="ShowDataTable">
+                    User Data Table
+                </a>
+
+                <a class="text-decoration-none text-white" asp-area="" asp-controller="Home" asp-action="Index">
+                    Login
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="" style="height:100rem;">      
+            @RenderBody()     
+    </div>
+
+   
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>
